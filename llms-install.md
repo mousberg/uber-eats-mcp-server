@@ -24,33 +24,7 @@ This guide provides instructions for AI agents to set up the Uber Eats MCP serve
 
 ## MCP Configuration
 
-To use this server with Cline or other MCP-compatible applications, you need to add it to your MCP settings file:
-
-### For Cline VSCode Extension
-
-Add the following to your MCP settings file located at:
-
-- macOS: `~/Library/Application Support/Code/User/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json`
-- Windows: `%APPDATA%\Code\User\globalStorage\saoudrizwan.claude-dev\settings\cline_mcp_settings.json`
-
-```json
-"github.com/ericzakariasson/uber-eats-mcp-server": {
-  "command": "/bin/bash",
-  "args": [
-    "-c",
-    "source /path/to/uber-eats-mcp-server/.venv/bin/activate && python3 /path/to/uber-eats-mcp-server/server.py"
-  ],
-  "env": {
-    "ANTHROPIC_API_KEY": "sk-ant-api03-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "LOG_LEVEL": "DEBUG",
-    "BROWSER_USE_LOGGING_LEVEL": "DEBUG",
-    "LANGCHAIN_TRACING_V2": "true",
-    "LANGCHAIN_VERBOSE": "true"
-  },
-  "disabled": false,
-  "autoApprove": []
-}
-```
+To use this server with MCP-compatible applications, you need to add it to your MCP settings file:
 
 **Important Notes:**
 
