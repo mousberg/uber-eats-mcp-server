@@ -1,8 +1,7 @@
 from typing import Awaitable, Callable
 from browser_use import Agent, Browser, BrowserConfig
 from dotenv import load_dotenv
-from langchain_openai import ChatOpenAI
-from langchain_anthropic import ChatAnthropic
+from browser_use.llm import ChatAnthropic
 import warnings
 
 load_dotenv()
@@ -15,7 +14,7 @@ browser = Browser(
     )
 )
 
-llm = ChatAnthropic(model_name="claude-3-5-sonnet-latest")
+llm = ChatAnthropic(model="claude-3-5-sonnet-latest")
 
 task_template = """
 perform the following task
